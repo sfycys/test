@@ -71,11 +71,9 @@ class Device extends Base
             $condition = input('keywords');
             $maps = [];
             //如果有查询
-            dump($condition);
 
             $supp = model('Supplier')->where('supplier_name','like','%'.$condition.'%')
                 ->column('supplier_id');
-            dump($supp);
             if ($supp !=null){
                 $map=['supplier_id','in',$supp];
                 $maps=[$map];

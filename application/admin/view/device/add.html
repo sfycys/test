@@ -90,10 +90,10 @@
                 data:$('form').serialize(),
                 dataType:'json',
                 success:function (data) {
-                    // if (data.code == 1) {
+                    if (data.code == 200) {
                         alert(data.msg);
                         location.href = data.url;
-                    // }
+                    }
                     // alert(data.msg);
                 }
             });
